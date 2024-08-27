@@ -1,0 +1,28 @@
+.cart-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin: 20px;
+}
+
+.cart-container h3 {
+    margin-bottom: 20px;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-group-item h6 {
+    margin-bottom: 5px;
+}
+
+.text-muted {
+    font-weight: bold;
+}
+
+.btn-success {
+    margin-top: 20px;
+}
