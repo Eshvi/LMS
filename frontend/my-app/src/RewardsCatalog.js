@@ -5,12 +5,12 @@ import Header from './Header';
 import Swal from 'sweetalert2';
 
 const rewards = [
-  { id: 1, name: '10% Off Coupon', points: 100, imageUrl: '/image/p1.png' },
-  { id: 2, name: 'Free Shipping', points: 200, imageUrl: '/image/p2.png' },
-  { id: 3, name: 'Free Product Sample', points: 300, imageUrl: '/image/p8.png' },
-  { id: 4, name: 'Free Lipstick', points: 400, imageUrl: '/image/p3.png' },
-  { id: 5, name: '12% off On Airpods', points: 500, imageUrl: '/image/p5.png' },
-  { id: 6, name: 'BOGO On Tees', points: 600, imageUrl: '/image/p4.png' },
+  { id: 1, name: '10% Off Coupon', points: 1, imageUrl: '/image/p1.png' },
+  { id: 2, name: 'Free Shipping', points: 2, imageUrl: '/image/p2.png' },
+  { id: 3, name: 'Free Product Sample', points: 3, imageUrl: '/image/p8.png' },
+  { id: 4, name: 'Free Lipstick', points: 4, imageUrl: '/image/p3.png' },
+  { id: 5, name: '12% off On Airpods', points: 5, imageUrl: '/image/p5.png' },
+  { id: 6, name: 'BOGO On Tees', points: 6, imageUrl: '/image/p4.png' },
 ];
 
 function RewardsCatalog() {

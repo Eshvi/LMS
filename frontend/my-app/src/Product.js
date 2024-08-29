@@ -2,23 +2,23 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Product.css';
+import { useDispatch, useSelector } from "react-redux";
 import Header from "./Header.js";
-import Cart from "./Cart.js";
+import { fetchProduct } from "./redux/slices/Slice.js";
+import store from "./redux/slices/Store.js";
+
 
 export default function Product() {
-    const [product, setProduct] = useState([]);
     const [cart, setCart] = useState([]);
     const [showCart, setShowCart] = useState(false);
-
+    const dispatch = useDispatch();
+    const { items, loading } = useSelector(store => store.Items);
+  
+    // Fetch products when the component mounts
     useEffect(() => {
-        axios.get("https://dummyjson.com/products")
-            .then(result => {
-                setProduct(result.data.products);
-            })
-            .catch(err => {
-                console.log(err);
-            });
-    }, []);
+      dispatch(fetchProduct());
+    }, [dispatch]);
+
 
     const handleAddToCart = (item) => {
         setCart(prevCart => {
@@ -60,7 +60,7 @@ export default function Product() {
                     </div>
                     <div className="row">
                         {
-                            product.map((data, index) => (
+                            items?.map((data, index) => (
                                 <div className="col-lg-3 col-md-4 col-sm-6 mb-4" key={index}>
                                     <div className="card product-card h-100">
                                         <img
